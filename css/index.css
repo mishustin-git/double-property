@@ -29,6 +29,10 @@
   --font5: "Geologica", sans-serif;
 }
 
+body {
+  background: var(--base-white);
+}
+
 .container {
   max-width: 328px;
   margin-left: auto;
@@ -88,8 +92,7 @@
 .main-screen .button {
   margin-bottom: 24px;
 }
-
-.title {
+.main-screen .title {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 48px;
@@ -98,8 +101,7 @@
   margin-top: 37px;
   margin-bottom: 12px;
 }
-
-.sub-title {
+.main-screen .sub-title {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 24px;
@@ -108,16 +110,15 @@
   margin-top: 0;
   margin-bottom: 11px;
 }
-
-.description {
+.main-screen .description {
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
 }
-.description__before-element {
+.main-screen .description__before-element {
   margin-bottom: 14px;
 }
-.description p {
+.main-screen .description p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
@@ -250,6 +251,104 @@
 }
 .statistics__substrate {
   position: absolute;
+}
+
+.advantages {
+  margin-top: 80px;
+}
+.advantages .title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--base-blue-logo);
+  margin-bottom: 10px;
+}
+.advantages .title::after {
+  content: "";
+  display: block;
+  width: 88px;
+  height: 2px;
+  background: var(--base-gold);
+  margin-top: 12px;
+}
+.advantages .sub-title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--base-blue);
+}
+.advantages__items {
+  margin-top: 25px;
+}
+.advantages__item {
+  width: 250px;
+}
+.advantages__item-number {
+  position: relative;
+  overflow: hidden;
+}
+.advantages__item-number span:nth-child(1) {
+  margin-left: -39px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 120px;
+  text-transform: uppercase;
+  color: var(--base-gold);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--base-gold);
+}
+.advantages__item-number span:nth-child(2) {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 120px;
+  text-transform: uppercase;
+  color: var(--base-gold-medium);
+  position: absolute;
+  z-index: -1;
+  left: -23px;
+  top: 2px;
+}
+.advantages__item-number::after {
+  display: block;
+  content: "";
+  width: 156px;
+  height: 2px;
+  background: var(--base-gold);
+  margin-top: -8px;
+}
+.advantages__item-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--base-blue);
+  margin-top: 20px;
+}
+.advantages__item-title::before {
+  content: "";
+  display: block;
+  border-radius: 2px;
+  width: 8px;
+  height: 8px;
+  background: var(--base-blue);
+}
+.advantages__item-description {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--base-brown-medium);
+  margin-top: 19px;
 }
 
 /*# sourceMappingURL=index.css.map */
