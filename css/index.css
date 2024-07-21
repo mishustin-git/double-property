@@ -899,8 +899,9 @@ body {
 }
 @media (min-width: 768px) {
   .container {
-    margin-right: 40px;
-    margin-left: 40px;
+    max-width: 89.58%;
+    margin-right: auto;
+    margin-left: auto;
   }
   .header {
     margin-top: 25px;
@@ -924,13 +925,15 @@ body {
   }
   .main-screen .container {
     flex-direction: row-reverse;
-    gap: 40px;
+    justify-content: space-between;
   }
   .main-screen__column {
-    max-width: 336px;
+    width: 49%;
+    align-content: center;
   }
   .main-screen .img-block {
     gap: 16px;
+    width: 45%;
   }
   .main-screen .img-block__top .img {
     border-radius: 4px 60px 4px 4px;
@@ -966,7 +969,7 @@ body {
     color: var(--base-brown-medium);
   }
   .main-screen .description__before-element {
-    margin-bottom: 27px;
+    margin-bottom: 31px;
   }
   .button_with-arrow {
     height: 55px;
@@ -978,7 +981,7 @@ body {
     flex-wrap: nowrap;
   }
   .statistics__item {
-    width: 160px;
+    width: 25%;
     margin: 0;
   }
   .statistics__item:nth-child(1) .statistics__substrate {
@@ -997,7 +1000,7 @@ body {
     right: 42px;
   }
   .statistics__item:nth-child(4) {
-    width: 124px;
+    width: 25%;
   }
   .statistics__item:nth-child(4) .statistics__substrate {
     top: -20px;
@@ -1011,14 +1014,20 @@ body {
     margin-left: 19px;
   }
   .advantages {
-    margin-top: 122px;
+    margin-top: 98px;
+  }
+  .advantages .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
   .advantages__img {
-    right: auto;
-    left: -159px;
+    left: auto;
+    right: 46%;
   }
   .advantages__content {
-    margin-left: 176px;
+    width: 511px;
+    margin-left: 0;
   }
   .advantages__content .title {
     font-family: var(--font-family);
@@ -1073,6 +1082,7 @@ body {
   }
   .objects .container {
     margin-right: 0;
+    margin-left: 40px;
   }
   .objects .title {
     font-family: var(--font-family);
@@ -1087,6 +1097,7 @@ body {
     margin-top: 20px;
   }
   .objects .cards {
+    margin-right: -40px;
     margin-left: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1103,6 +1114,7 @@ body {
     display: none;
   }
   .objects .buttons-wrapper {
+    margin-left: 40px;
     margin-right: 40px;
     margin-top: 40px;
     align-items: center;
@@ -1122,9 +1134,10 @@ body {
     position: absolute;
     z-index: -1;
     top: -43px;
-    right: 0px;
+    right: auto;
     width: auto;
     height: auto;
+    left: 60.735%;
   }
   .feedback__img_mobile {
     display: none;
@@ -1149,10 +1162,10 @@ body {
     font-size: 24px;
     line-height: 120%;
     color: var(--base-blue);
-    width: 300px;
+    width: 48.8%;
   }
   .feedback__content .form {
-    width: 336px;
+    width: 48.8%;
     margin-top: 21px;
   }
   .feedback__content .form__input {
@@ -1224,29 +1237,12 @@ body {
     text-align: start;
   }
 }
-@media (min-width: 1920px) {
-  .button_with-arrow {
-    height: 79px;
+@media (min-width: 1024px) {
+  .advantages__content {
+    margin-right: 10%;
   }
-  .button_with-arrow span {
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 140%;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--base-white);
-  }
-  .button__arrow_for-mobile-tablet {
-    display: none;
-  }
-  .button__arrow_for-desktop {
-    display: block;
-  }
-  .container {
-    margin-right: 300px;
-    margin-left: 300px;
-  }
+}
+@media (min-width: 1300px) {
   .header__center-block {
     display: block;
   }
@@ -1287,13 +1283,7 @@ body {
     border-radius: 20px;
   }
   .main-screen {
-    margin-top: 90px;
-  }
-  .main-screen .container {
-    justify-content: space-between;
-  }
-  .main-screen__column {
-    max-width: 648px;
+    overflow: hidden;
   }
   .main-screen .title {
     margin-bottom: 27px;
@@ -1336,13 +1326,18 @@ body {
   }
   .main-screen .img-block__top .img {
     border-radius: 8px 100px 8px 8px;
-    width: 535px;
+    width: auto;
     height: 536px;
   }
   .main-screen .img-block__bottom .img {
-    width: 260px;
     height: 260px;
     border-radius: 8px;
+  }
+  .main-screen__column {
+    max-width: 648px;
+  }
+  .main-screen .container {
+    justify-content: space-between;
   }
   .statistics {
     margin-top: 196px;
@@ -1403,9 +1398,12 @@ body {
     display: block;
   }
   .advantages {
-    margin-top: 254px;
+    margin-top: 224px;
   }
   .advantages__content {
+    margin-left: 0;
+    width: 984px;
+    margin-right: 0;
     margin-left: 336px;
   }
   .advantages__content .title {
@@ -1521,8 +1519,8 @@ body {
     color: var(--base-brown-medium);
   }
   .advantages__img {
-    right: auto;
-    left: 0px;
+    left: auto;
+    right: 61%;
     top: 54px;
   }
   .advantages__img_for-mobile-tablet {
@@ -1530,6 +1528,55 @@ body {
   }
   .advantages__img_for-desktop {
     display: block;
+  }
+  .button_with-arrow {
+    height: 79px;
+  }
+  .button_with-arrow span {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--base-white);
+  }
+  .button__arrow_for-mobile-tablet {
+    display: none;
+  }
+  .button__arrow_for-desktop {
+    display: block;
+  }
+  .objects .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1440px) {
+  .objects .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 68.75%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .main-screen {
+    margin-top: 90px;
+  }
+  .main-screen .img-block {
+    gap: 14px;
+  }
+  .main-screen .img-block__top .img {
+    width: 535px;
+  }
+  .main-screen .img-block__bottom .img {
+    width: 260px;
+  }
+  .advantages__img {
+    left: auto;
+    right: 58%;
   }
   .objects {
     margin-top: 217px;
@@ -1607,6 +1654,9 @@ body {
     text-transform: uppercase;
     text-align: center;
     color: var(--base-white);
+  }
+  .objects .cards {
+    grid-template-columns: repeat(4, 1fr);
   }
   .feedback {
     margin-top: 296px;
