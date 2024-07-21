@@ -34,9 +34,9 @@ body {
 }
 
 .container {
-  min-width: 328px;
-  margin-left: 16px;
-  margin-right: 16px;
+  width: 91.1%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header {
@@ -128,13 +128,28 @@ body {
 .main-screen .description {
   display: flex;
   flex-direction: column;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 .main-screen .description__before-element {
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 .main-screen .description__before-element_for-desktop {
   display: none;
+}
+.main-screen .description__square {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  background: var(--base-gold);
+}
+.main-screen .description__line {
+  display: block;
+  width: calc(100% - 16px);
+  height: 2px;
+  background: var(--base-gold);
+  margin-left: 16px;
+  margin-top: -2px;
 }
 .main-screen .description p {
   font-family: var(--font-family);
@@ -176,6 +191,7 @@ body {
   background: var(--base-gold);
   position: relative;
   min-width: 64px;
+  max-width: 64px;
   border-radius: 0 24px 8px 0;
 }
 .button_with-arrow span:nth-child(2) svg {
@@ -196,7 +212,7 @@ body {
   position: relative;
 }
 .img-block .img__substrate {
-  height: 100%;
+  height: 99%;
   width: 100%;
   position: absolute;
   background: var(--transparent-grey-20);
@@ -210,6 +226,8 @@ body {
 .img-block__top .img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: bottom;
 }
 .img-block__bottom {
   display: flex;
@@ -225,10 +243,12 @@ body {
 .img-block__bottom .img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .statistics {
-  overflow-x: hidden;
+  overflow: hidden;
   margin-top: 80px;
 }
 .statistics .container {
@@ -245,19 +265,23 @@ body {
 }
 .statistics__item:nth-child(1) .statistics__substrate {
   top: -18px;
-  right: -15px;
+  right: auto;
+  left: 26px;
 }
 .statistics__item:nth-child(2) .statistics__substrate {
   top: -18px;
-  right: 8px;
+  right: auto;
+  left: 3px;
 }
 .statistics__item:nth-child(3) .statistics__substrate {
   top: -18px;
-  right: 20px;
+  right: auto;
+  left: -9px;
 }
 .statistics__item:nth-child(4) .statistics__substrate {
   top: -20px;
-  right: -28px;
+  right: auto;
+  left: 39px;
 }
 .statistics__number {
   display: block;
@@ -294,7 +318,7 @@ body {
   overflow: hidden;
 }
 .advantages__content .button {
-  margin-top: 58px;
+  margin-top: 49px;
 }
 .advantages .title {
   font-family: var(--font-family);
@@ -414,7 +438,8 @@ body {
 .advantages__img {
   position: absolute;
   top: -36px;
-  right: -263px;
+  right: auto;
+  left: 52px;
   z-index: -1;
 }
 .advantages__img_for-desktop {
@@ -442,10 +467,13 @@ body {
   margin-top: 11px;
 }
 .objects .cards {
-  display: flex;
-  flex-direction: column;
   margin-left: 8px;
   gap: 18px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .objects .card {
   position: relative;
@@ -777,7 +805,7 @@ body {
 .footer__top {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  justify-content: space-between;
 }
 .footer__logo {
   display: block;
@@ -860,10 +888,15 @@ body {
   display: none;
 }
 
-.title_desktop {
+.title_for-desktop {
   display: none;
 }
 
+@media (min-width: 490px) {
+  .advantages__img {
+    left: 228px;
+  }
+}
 @media (min-width: 768px) {
   .container {
     margin-right: 40px;
@@ -1063,6 +1096,8 @@ body {
     overflow: auto;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    align-items: inherit;
+    justify-content: inherit;
   }
   .objects .cards::-webkit-scrollbar {
     display: none;
