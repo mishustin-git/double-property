@@ -37,3 +37,15 @@ const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@((
 function isEmailValid(value) {
     return EMAIL_REGEXP.test(value);
 }
+
+$('.button_open-modal-сatalog').on('click', function(e) {
+  e.preventDefault();
+  $('.modal_catalog').toggleClass('is-visible');
+});
+$('.button_open-modal-consultation').on('click', function(e) {
+    e.preventDefault();
+    $('.modal_consultation').toggleClass('is-visible');
+  });
+$('.modal-close').on('click',function(){
+	$(this).closest('.modal').removeClass('is-visible');
+})
