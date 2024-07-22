@@ -49,3 +49,21 @@ $('.button_open-modal-consultation').on('click', function(e) {
 $('.modal-close').on('click',function(){
 	$(this).closest('.modal').removeClass('is-visible');
 })
+if (window.screen.width < 768){
+    count = 0;
+    $('.card').each(function(){
+        if (count >= 4){
+            $(this).addClass('hidden')
+        }
+        count++;
+    })
+}
+if (window.screen.width < 1300){
+    count = 0;
+    $('.card').each(function(){
+        if (count >= 8){
+            $(this).addClass('hidden')
+        }
+        count++;
+    })
+}
