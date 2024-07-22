@@ -250,6 +250,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 8px;
+    overflow: hidden;
     .img{
         position: relative;
         &__substrate{
@@ -305,6 +306,7 @@ body{
         position: relative;
         margin-top: 19px;
         margin-left: 12px;
+        overflow: hidden;
         &:nth-child(1){
             .statistics__substrate{
                 top: -18px;
@@ -448,14 +450,22 @@ body{
                 top: 2px;
             }
         }
-        &::after{
-            display: block;
-            content: '';
-            width: 156px;
-            height: 2px;
-            background: var(--base-gold);
-            margin-top: -8px;
-        }
+        // &::after{
+        //     display: block;
+        //     content: '';
+        //     width: 156px;
+        //     height: 2px;
+        //     background: var(--base-gold);
+        //     margin-top: -8px;
+        // }
+    }
+    &__line{
+        display: block;
+        content: '';
+        width: 156px;
+        height: 2px;
+        background: var(--base-gold);
+        margin-top: -8px;
     }
     &__item-title{
         display: flex;
@@ -1265,9 +1275,9 @@ body{
             gap:24px;
         }
         &__item-number{
-            &::after{
-                width: 246px;
-            }
+        }
+        &__line{
+            width: 246px;
         }
         &__item{
             &:nth-child(1){
@@ -1740,10 +1750,10 @@ body{
                     left: -79px;
                 }
             }
-            &::after{
-                margin-top: -65px;
-                width: 648px;
-            }
+        }
+        &__line{
+            margin-top: -65px;
+            width: 648px !important;
         }
         &__item-title{
             gap: 18px;

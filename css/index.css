@@ -235,6 +235,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  overflow: hidden;
 }
 .img-block .img {
   position: relative;
@@ -290,6 +291,7 @@ body {
   position: relative;
   margin-top: 19px;
   margin-left: 12px;
+  overflow: hidden;
 }
 .statistics__item:nth-child(1) .statistics__substrate {
   top: -18px;
@@ -423,7 +425,7 @@ body {
   left: -23px;
   top: 2px;
 }
-.advantages__item-number::after {
+.advantages__line {
   display: block;
   content: "";
   width: 156px;
@@ -1218,7 +1220,7 @@ body {
   .advantages__items {
     gap: 24px;
   }
-  .advantages__item-number::after {
+  .advantages__line {
     width: 246px;
   }
   .advantages__item:nth-child(1) {
@@ -1664,9 +1666,9 @@ body {
     color: var(--base-gold-light);
     left: -79px;
   }
-  .advantages__item-number::after {
+  .advantages__line {
     margin-top: -65px;
-    width: 648px;
+    width: 648px !important;
   }
   .advantages__item-title {
     gap: 18px;
